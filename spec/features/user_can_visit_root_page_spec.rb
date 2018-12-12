@@ -14,10 +14,9 @@ RSpec.describe 'api call' do
   it "can locate stations" do 
       zip = 80203
 
-
       visit "/"
       
-      fill_in "Search by zip...", with: zip
+      fill_in :q, with: zip
       click_on "Locate"
 
       expect(current_path).to eq("/search")
