@@ -1,10 +1,13 @@
 class UserSearchFacade 
   attr_reader :stations
-  def initialize(zip)
-    @zip = zip 
+  def initialize(stations)
+    @stations = stations[:fuel_station].map do |station|
+      Station.new(station)
+    end
   end
 
   def stations
-    api_adapter.stations
+
+    api_adastations
   end
 end
