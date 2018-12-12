@@ -1,6 +1,6 @@
 class UserSearchFacade 
+  attr_reader :stations
   def initialize(zip)
-    binding.pry
     @zip = zip 
   end
 
